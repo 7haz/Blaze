@@ -3,5 +3,6 @@
   "lanType": "ip",
   "dev": true,
   "minify": false,
-  "urlRandomness": "hj-s67"
+  "urlRandomness": "js-axs",
+  "https": false
 }
