@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { TouchableOpacity, View, Text, StyleSheet } from "react-native";
-import { Input } from "react-native-elements";
+import { Input, TouchableOpacity, View, Text, StyleSheet } from "react-native";
+// import { Input } from "react-native-elements";
 import useLocationStore from "../stores/useLocationStore";
 import DashTimeEntry from "./DashTimeEntry";
 import DashDistanceEntry from "./DashDistanceEntry";

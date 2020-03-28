@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet } from "react-native";
 import RecordingDash from "./RecordingDash";
 import useLocationStore from "../stores/useLocationStore";
-import StartReccordingButton from "../screens/StartRecordingButton";
+import StartReccordingButton from "../components/StartRecordingButton";
 
 const NewTrackForm = () => {
   const isRecording = useLocationStore(st => st.isRecording);
