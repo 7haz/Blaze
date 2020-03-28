@@ -1,18 +1,28 @@
-import React from "react";
-import { Text, StyleSheet } from "react-native";
+import React, { useEffect } from "react";
+import { FlatList } from "react-native-gesture-handler";
+import TrackCard from "../components/TrackCard";
+import useTrackStore from "../stores/useTrackStore";
 
-const TracksListScreen = () => {
+const TracksListScreen = ({ navigation }) => {
+  const tracks = useTrackStore(st => st.tracks);
+  const updateTracksList = useTrackStore(st => st.update);
+  useEffect(() => {
+    updateTracksList();
+  }, []);
   return (
     <>
-      <Text style={s.text}> TracksListScreen Component</Text>
+      <FlatList
+        data={tracks}
+        renderItem={({ item }) => (
+          <TrackCard
+            {...item}
+            onPress={() => navigation.navigate("Show", { id: item.id })}
+          />
+        )}
+        keyExtractor={track => track.id}
+      />
     </>
   );
 };
-
-const s = StyleSheet.create({
-  text: {
-    fontSize: 30
-  }
-});
 
 export default TracksListScreen;
