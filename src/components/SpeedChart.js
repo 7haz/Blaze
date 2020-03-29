@@ -19,7 +19,7 @@ const SpeedChart = ({ locations }) => {
           // labels: ["January", "February", "March", "April", "May", "June"],
           datasets: [{ data }]
         }}
-        width={Dimensions.get("window").width - 30}
+        // width={Dimensions.get("window").width - 30}
         height={220}
         yAxisLabel=""
         yAxisSuffix=""

@@ -54,7 +54,7 @@ const Map = ({ isFocused }) => {
 
 const s = StyleSheet.create({
   map: {
-    width: Dimensions.get("window").width,
+    // width: Dimensions.get("window").width,
     height: 600
   },
   mask: {

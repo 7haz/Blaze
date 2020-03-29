@@ -18,7 +18,7 @@ const ElevationChart = ({ locations }) => {
         data={{
           datasets: [{ data }]
         }}
-        width={Dimensions.get("window").width - 30}
+        // width={Dimensions.get("window").width - 30}
         height={220}
         yAxisLabel=""
         yAxisSuffix=""

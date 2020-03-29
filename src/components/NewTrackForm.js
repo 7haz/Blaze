@@ -1,5 +1,4 @@
 import React from "react";
-import { StyleSheet } from "react-native";
 import RecordingDash from "./RecordingDash";
 import useLocationStore from "../stores/useLocationStore";
 import StartReccordingButton from "../components/StartRecordingButton";
@@ -14,9 +13,5 @@ const NewTrackForm = () => {
     return <StartReccordingButton onPress={startRecording} />;
   }
 };
-
-const s = StyleSheet.create({
-  button: {}
-});
 
 export default NewTrackForm;

@@ -1,6 +1,12 @@
 import React, { useState } from "react";
-import { Input, TouchableOpacity, View, Text, StyleSheet } from "react-native";
-// import { Input } from "react-native-elements";
+import {
+  TextInput,
+  TouchableOpacity,
+  View,
+  Text,
+  StyleSheet
+} from "react-native";
+
 import useLocationStore from "../stores/useLocationStore";
 import DashTimeEntry from "./DashTimeEntry";
 import DashDistanceEntry from "./DashDistanceEntry";
@@ -20,7 +26,9 @@ const RecordingDash = () => {
   if (showInput) {
     return (
       <View style={s.formContainer}>
-        <Input
+        <TextInput
+          autoCorrect={false}
+          style={s.input}
           placeholder="Enter Track Name"
           value={trackName}
           onChangeText={setTrackName}
@@ -50,6 +58,12 @@ const RecordingDash = () => {
 };
 
 const s = StyleSheet.create({
+  input: {
+    margin: 10,
+    fontSize: 20,
+    borderBottomColor: "rgba(70,70,70,0.5)",
+    borderBottomWidth: 1
+  },
   dashContainer: {
     flexDirection: "row",
     justifyContent: "space-around"
